@@ -2,11 +2,27 @@ git init
 git config --global user.name
 git config --global user.email
 git add "filename"
-git add .
+git add .  - Bring your file to the staging area (for building commit)
 git rm "file/path"
 git log (history of commits)
 git log --oneline (quick history of commits)
 git diff (content difference)
 git show ['SHA'] - tells all the details of commits
 git blame - shows line wise all the changes
+git status -  tells what modification happend in the files
 
+
+
+
+
+Visual representation : -
+
+┌────────────────────────┐        ┌─────────────────────┐        ┌───────────────────────┐
+│    WORKING DIRECTORY   │        │    STAGING AREA     │        │     GIT REPOSITORY     │
+│ (Your actual files on  │  git add   (Index file)      │ git commit   (.git/objects)   │
+│   your machine)        │  ───────→│  Snapshot builder  │──────────→│ (History of commits) │
+└────────────────────────┘        └─────────────────────┘        └───────────────────────┘
+         │                          │                                  │
+         │ edit, delete, create     │ blobs + trees stored             │ commit = metadata + snapshot
+         ▼                          ▼                                  ▼
+   “Untracked / Modified”     “Staged changes”                   “Permanent version”
