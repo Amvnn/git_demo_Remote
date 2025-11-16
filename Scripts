@@ -10,7 +10,13 @@ git diff (content difference)
 git show ['SHA'] - tells all the details of commits
 git blame - shows line wise all the changes
 git status -  tells what modification happend in the files
+git reset --hard [SHA] - change Head to mentioned commit SHA-hash (Problem - if you want to revert a commit in middle of the commit chain(linked-list type) -  You can't')
+git revert [SHA] - will help you revert any specific commit anywhere from the linked-list chain of commits.
+git remote --v  - tells about do you have any Remote linked to push your code or not.
 
+
+
+GitHub is a cloud service that hosts Git repositories remotely and provides tools for collaboration (like pull requests, issues, code reviews). Git maintains commit history; GitHub just stores and shares it.
 
 
 
