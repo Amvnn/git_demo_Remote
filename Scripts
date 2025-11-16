@@ -1,0 +1,12 @@
+git init 
+git config --global user.name
+git config --global user.email
+git add "filename"
+git add .
+git rm "file/path"
+git log (history of commits)
+git log --oneline (quick history of commits)
+git diff (content difference)
+git show ['SHA'] - tells all the details of commits
+git blame - shows line wise all the changes
+
