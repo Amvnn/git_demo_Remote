@@ -16,7 +16,8 @@ git remote --v  - tells about do you have any Remote linked to push your code or
 git remote add origin [Repo_link] - adds your repo remote to the working directory.
 git push -u origin main - help you to push upstream (-u) to origin in main branch.
 git branch - tells in which branch you are in.
-git branch <branch name> - Create a branch
+git branch "branch name" - Create a branch.
+git checkout "Branch_Name" -  Switch to the mentioned branch.
 
 
 GitHub is a cloud service that hosts Git repositories remotely and provides tools for collaboration (like pull requests, issues, code reviews). Git maintains commit history; GitHub just stores and shares it.
