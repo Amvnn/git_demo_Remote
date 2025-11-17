@@ -15,6 +15,8 @@ git revert [SHA] - will help you revert any specific commit anywhere from the li
 git remote --v  - tells about do you have any Remote linked to push your code or not.
 git remote add origin [Repo_link] - adds your repo remote to the working directory.
 git push -u origin main - help you to push upstream (-u) to origin in main branch.
+git branch - tells in which branch you are in.
+git branch <branch name> - Create a branch
 
 
 GitHub is a cloud service that hosts Git repositories remotely and provides tools for collaboration (like pull requests, issues, code reviews). Git maintains commit history; GitHub just stores and shares it.
@@ -33,3 +35,18 @@ Visual representation : -
          │ edit, delete, create     │ blobs + trees stored             │ commit = metadata + snapshot
          ▼                          ▼                                  ▼
    “Untracked / Modified”     “Staged changes”                   “Permanent version”
+
+
+
+GIT BRANCHING :- Useful when we are working in a company and there are so many developers
+ - Pushing commits of all developers in a one branch will polute the commits and it makes it hard to revert any perticular commit ( A , A , A , A , A , B , B , A , B , A ) -if you have to revert B's' commits than it will be hard to revert. Thats why there is the concept of branching.
+
+ visual representation : -
+
+ -- PARALLEL BRANCHES VIEW
+master:          A1 —— A2 —— A3 —— A4 —— A5
+feature/login:                 \—— F1 —— F2 —— F3
+bugfix/session-timeout:                    \—— B1 —— B2
+
+master (after merging feature/login):
+    A1 —— A2 —— A3 —— F1 —— F2 —— F3 —— A4 —— A5
